@@ -18,15 +18,15 @@ class ContactInfo extends Component {
       <div className="contact-info">
         <h3>Contacto</h3>
         <div className="box">
-          <div className="tlf">
+          {/* <div className="tlf">
             <FontAwesomeIcon className="icon" icon={faPhone} />
             <a href="tel://655923360">655923360</a>
           </div>
           <div className="email">
             <FontAwesomeIcon className="icon" icon={faAt} />
             <a href="mailto:jesusalxen@gmail.com">jesusalxen@gmail.com</a>
-          </div>
-          <div className="tlf">
+          </div> */}
+          <div className="birthday">
             <FontAwesomeIcon className="icon" icon={faBirthdayCake} />
             <a>23/05/1987</a>
           </div>
