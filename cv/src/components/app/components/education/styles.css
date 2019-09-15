@@ -1,0 +1,12 @@
+.education-item {
+    display: flex;
+
+}
+
+.education-item .dates {
+    flex: 3;
+}
+
+.education-item .explanation {
+    flex: 9;
+}

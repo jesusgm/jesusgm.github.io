@@ -8,15 +8,15 @@ class Langs extends Component {
         <h3>Idiomas</h3>
         <div className="box">
           <span>Español</span>
-          <progress class="progress is-small" value="100" max="100">
+          <progress className="progress is-small" value="100" max="100">
             100%
           </progress>
           <span>Gallego</span>
-          <progress class="progress is-small" value="100" max="100">
+          <progress className="progress is-small" value="100" max="100">
             100%
           </progress>
           <span>Inglés</span>
-          <progress class="progress is-small" value="50" max="100">
+          <progress className="progress is-small" value="50" max="100">
             50%
           </progress>
         </div>

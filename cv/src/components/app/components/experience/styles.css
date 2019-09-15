@@ -1,0 +1,12 @@
+.experience-item {
+    display: flex;
+
+}
+
+.experience-item .dates {
+    flex: 3;
+}
+
+.experience-item .explanation {
+    flex: 9;
+}
