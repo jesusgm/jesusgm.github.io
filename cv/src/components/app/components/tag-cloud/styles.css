@@ -1,0 +1,11 @@
+.tag-cloud-container {
+    min-height: 300px;
+}
+
+.tag-cloud {
+    flex: 1;
+}
+
+.tag-cloud>div {
+    transition: 1.4s;
+}

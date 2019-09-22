@@ -26,32 +26,46 @@ body {
 
 body #root {
   min-height: 100%;
+  font-size: 14px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body #root h1,
+body #root h2,
+body #root h3,
+body #root h4,
+body #root h5,
+body #root h6 {
   font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
-h1 {
+body #root h1 {
   font-size: 35px;
   margin: 10px 0;
 }
 
-h2 {
+body #root h2 {
   font-size: 20px;
   margin: 10px 0;
 }
 
-h3 {
+body #root h3 {
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
   border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+
+body #root .col2 h3 {
+  text-align: left;
+}
+
+body #root h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding-bottom: 0;
+  font-weight: bold;
 }
 
 .columns .column>div:not(:last-child) {
@@ -67,4 +81,14 @@ h3 {
 
 .contact-info .box>div .icon {
   margin-right: 10px;
+}
+
+.cuote {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.cuote_ref {
+  font-size: 13px;
+  text-align: right;
 }

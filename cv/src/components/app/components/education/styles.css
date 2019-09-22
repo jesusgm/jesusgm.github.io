@@ -1,6 +1,6 @@
 .education-item {
     display: flex;
-
+    margin-bottom: 20px;
 }
 
 .education-item .dates {

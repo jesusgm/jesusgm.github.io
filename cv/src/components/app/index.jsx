@@ -7,6 +7,7 @@ import Langs from "./components/langs";
 import Profile from "./components/profile";
 import Experience from "./components/experience";
 import Education from "./components/education";
+import MyTagCloud from "./components/tag-cloud";
 
 import "../../../node_modules/bulma/css/bulma.css";
 import "./style.css";
@@ -25,7 +26,9 @@ class App extends Component {
   componentDidMount() {
     axios.get(`http://jgmcloud.000webhostapp.com/cvapi/`).then(res => {
       const data = res.data;
-      this.setState({ ...data });
+      this.setState({
+        ...data
+      });
     });
   }
 
@@ -41,13 +44,16 @@ class App extends Component {
         <section className="content columns">
           <div className="col1 column is-one-third">
             <ContactInfo user={user} />
-            {skills && skills.length > 0 ? <Skills skills={skills} /> : null}
+            <Skills
+              skills={skills.filter(s => s.skill === "1" && s.percentage >= 75)}
+            />
             <Langs />
           </div>
           <div className="col2 column">
             <Profile bio={user.bio} bio_ref={user.bio_ref} />
             <Experience experience={experience} />
             <Education education={education} />
+            <MyTagCloud tags={skills} />
           </div>
         </section>
       </div>

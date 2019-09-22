@@ -1,6 +1,6 @@
 .experience-item {
     display: flex;
-
+    margin-bottom: 20px;
 }
 
 .experience-item .dates {
