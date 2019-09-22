@@ -24,12 +24,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://jgmcloud.000webhostapp.com/cvapi/`).then(res => {
-      const data = res.data;
-      this.setState({
-        ...data
+    axios
+      .get(`http://jgmcloud.000webhostapp.com/cvapi/`, { mode: "cors" })
+      .then(res => {
+        const data = res.data;
+        this.setState({
+          ...data
+        });
       });
-    });
   }
 
   render() {
