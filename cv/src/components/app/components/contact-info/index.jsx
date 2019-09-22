@@ -34,40 +34,19 @@ class ContactInfo extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state);
     event.preventDefault();
     this.setState({ loading: true });
     var config = {
-      method: "POST",
-      body: JSON.stringify(this.state),
-      mode: "cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
+      params: {
+        name: this.state.name,
+        email: this.state.email,
+        comment: this.state.comment
+      },
+      mode: "cors"
     };
 
-    fetch(`http://jgmcloud.000webhostapp.com/cvapi/contact`, config)
-      .then(response => response.json())
-      .then(response => {
-        this.setState({
-          loading: false,
-          showForm: false,
-          name: "",
-          email: "",
-          comment: ""
-        });
-      })
-      .catch(err => {
-        console.error("Caught error: ", err);
-        this.setState({
-          loading: false
-        });
-      });
-    /*
     axios
-      .put(`https://jgmcloud.000webhostapp.com/cvapi/contact`, config)
+      .get(`https://jgmcloud.000webhostapp.com/cvapi/contact`, config)
       .then(res => {
         const data = res.data;
         this.setState({
@@ -82,7 +61,7 @@ class ContactInfo extends Component {
         this.setState({
           loading: false
         });
-      });*/
+      });
   }
 
   closeModal(event) {

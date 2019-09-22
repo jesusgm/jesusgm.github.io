@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://jgmcloud.000webhostapp.com/cvapi/`).then(res => {
+    axios.get(`http://jgmcloud.000webhostapp.com/cvapi/`).then(res => {
       const data = res.data;
       this.setState({ ...data });
     });
