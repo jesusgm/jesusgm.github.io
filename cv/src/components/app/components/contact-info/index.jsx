@@ -50,7 +50,7 @@ class ContactInfo extends Component {
     };
 
     axios
-      .get(`https://jgmcloud.000webhostapp.com/cvapi/contact`, config)
+      .get(`//jgmcloud.000webhostapp.com/cvapi/contact`, config)
       .then(res => {
         const data = res.data;
         this.setState({
