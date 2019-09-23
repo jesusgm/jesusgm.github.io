@@ -55,7 +55,7 @@ class App extends Component {
             <Profile bio={user.bio} bio_ref={user.bio_ref} />
             <Experience experience={experience} />
             <Education education={education} />
-            <MyTagCloud tags={skills} />
+            <MyTagCloud tags={skills.filter(s => s.tags === "1")} />
           </div>
         </section>
       </div>

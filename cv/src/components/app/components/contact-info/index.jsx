@@ -168,7 +168,7 @@ class ContactInfo extends Component {
 
     return (
       <div className="contact-info">
-        <h3>Datos y contacto</h3>
+        <h3>Datos personales</h3>
         <div className="box">
           <div className="tlf">
             <FontAwesomeIcon className="icon" icon={faPhone} />
