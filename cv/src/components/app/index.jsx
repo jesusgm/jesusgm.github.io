@@ -8,6 +8,7 @@ import Profile from "./components/profile";
 import Experience from "./components/experience";
 import Education from "./components/education";
 import MyTagCloud from "./components/tag-cloud";
+import ReactGA from "react-ga";
 
 import "../../../node_modules/bulma/css/bulma.css";
 import "./style.css";
@@ -24,6 +25,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+    ReactGA.initialize("UA-148892916-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     axios
       .get(`//jgmcloud.000webhostapp.com/cvapi/`, { mode: "cors" })
       .then(res => {

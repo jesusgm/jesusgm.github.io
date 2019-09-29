@@ -38,13 +38,18 @@ class ContactInfo extends Component {
     this.setState({ loading: true });
     var config = {
       params: {
-        data: btoa(
-          JSON.stringify({
-            name: this.state.name,
-            email: this.state.email,
-            comment: this.state.comment
-          })
-        )
+        // data: btoa(
+        //   JSON.stringify({
+        //     name: this.state.name,
+        //     email: this.state.email,
+        //     comment: this.state.comment
+        //   })
+        // )
+        data: JSON.stringify({
+          name: this.state.name,
+          email: this.state.email,
+          comment: this.state.comment
+        })
       },
       mode: "cors"
     };

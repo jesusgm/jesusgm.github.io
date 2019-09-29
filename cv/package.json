@@ -14,6 +14,7 @@
     "randomcolor": "^0.5.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-ga": "^2.6.0",
     "react-scripts": "3.1.1",
     "react-tag-cloud": "^1.3.2"
   },
