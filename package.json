@@ -1,15 +1,28 @@
 {
-  "name": "learn-starter",
+  "name": "jesusgm.github.io",
+  "description": "Personal page with blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start"
   },
   "dependencies": {
+    "@jesusgm/react-lib-ui": "^0.3.5",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.17.0",
+    "gray-matter": "^4.0.2",
     "next": "^10.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "rss": "^1.2.2",
+    "sass": "^1.32.7",
+    "tailwindcss": "^2.0.3"
   }
 }
