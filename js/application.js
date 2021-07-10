@@ -1,5 +1,7 @@
 window.addEventListener('load', function () {
-    setInterval(changeColors, 3000)
+    setInterval(changeColors, 10000);
+
+    initializeListeners();
 });
 
 function addZero(i) {
@@ -29,5 +31,61 @@ function changeColors() {
     var color = "rgb(" + red + ", " + green + ", " + blue + ")";
 
     document.body.style.color = color;
+
+}
+
+function initializeListeners(){
+    //selectors
+    var closeBtn = document.querySelector(".close-contact");
+    var contactSection = document.querySelector("#contact");
+    var showContactBtn = document.querySelector("#show-contact-btn");
+    var contactForm = document.querySelector(".contact-form")
+
+
+    showContactBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        contactSection.classList.toggle("hidden");
+    });
+    closeBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        contactSection.classList.toggle("hidden");
+    });
+
+    contactSection.addEventListener("submit",  function(e){
+        e.preventDefault();
+
+        const data = new FormData(e.target)
+        const dataEntries = Array.from(data.entries());
+
+        const body = {};
+
+        dataEntries.forEach(entry => {
+            body[entry[0]] = entry[1];
+        });
+
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        var config = { 
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(body),
+            headers: headers
+        };
+
+        const host = "http://jesusgm.ddns.net"
+
+        var request = new Request(`${host}/jesusgm.github.io`, config);
+
+        fetch(request)
+            .then(res => res.json())
+            .then(res=> {
+                console.log(res);
+                contactSection.classList.toggle("hidden");
+            }).catch(error => {
+                console.error(error);
+                contactSection.classList.toggle("hidden");
+            });
+    })
 
 }

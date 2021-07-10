@@ -107,11 +107,39 @@
 							View my CV
 						</a>
 					</li>
+					<li>
+						<a id="show-contact-btn"  >
+							Contacto
+						</a>
+					</li>
 				</ul>
 			</div>
 
 		</div>
 	</main>
+	<section id="contact" class="hidden">
+		<span class="close-contact">
+			<i class="fas fa-times"></i>
+		</span>
+		<h3>Contacto</h3>
+		<form class="contact-form">
+			<div class="form-control">
+				<label for="name">Nombre</label>
+				<input id="name" type="text" name="name" class="input" />
+			</div>
+			<div class="form-control">
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email" class="input" />
+			</div>
+			<div class="form-control">
+				<label for="msg">Mensaje</label>
+				<textarea id="msg" name="msg" class="input"></textarea>
+			</div>
+			<div class="buttons-container right">
+				<button type="submit">Enviar</button>
+			</div>
+		</form>
+	</section>
 </body>
 
 </html>
